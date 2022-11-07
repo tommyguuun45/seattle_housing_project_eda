@@ -10,8 +10,15 @@
 - **floorsTotal** - floors (levels) in house
 - **waterfront** - House which has a view to a waterfront
 - **view** - Has been viewed
-- **condition** - How good the condition is ( Overall )
-- **grade** - overall grade given to the housing unit, based on King County grading system
+- **condition** - How good the condition is ( Overall ) (1-5)
+    1 = Poor- Worn out. Repair and overhaul needed
+    2 = Fair- Badly worn. Much repair needed.
+    3 = Average- a few minor repairs are needed
+    4 = Good- No obvious maintenance required
+    5= Very Good- All items well maintained
+- **grade** - overall grade given to the housing unit, based on King County grading system (1- 13)
+    1-3 Falls short of minimum building standards. Normally cabin or inferior structure
+    13 Generally custom designed and built. Mansion level.
 - **sqft_above** - square footage of house apart from basement
 - **sqft_basement** - square footage of the basement
 - **yr_built** - Built Year

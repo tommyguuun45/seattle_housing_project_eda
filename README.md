@@ -1,36 +1,26 @@
-# ds-project-template
+# Seattle Housing Dataset - EDA Project
 
-Template for creating ds simple projects
+This repository contains an Exploratory Data Analysis on the Seattle Housing dataset. After exploring and cleaning the data in a first step, I set up a few hypotheses and tested them afterwards. The goal of the analysis is to make some recommendations for my stakeholder who wants to invest in houses in poor neighborhoods in Seattle.
 
-## Requirements
+The results of the analysis can be found in 
+the [Jupyter Notebook](EDA.ipynb) and in the [Stakeholder Presentation](SeattleHousingDatasetEDA.pdf).
 
-- pyenv
-- python==3.9.8
 
-## Setup
 
-One of the first steps when starting any data science project is to create a virtual environment. For this project you have to create this environment from scratch yourself. However, you should be already familiar with the commands you will need to do so. The general workflow consists of... 
+## Environment
 
-* setting the python version locally to 3.9.8
-* creating a virtual environment using the `venv` module
-* activating your newly created environment 
-* upgrading `pip` (This step is not absolutely necessary, but will save you trouble when installing some packages.)
-* installing the required packages via `pip`
+Please make sure you have forked the repo and set up a new virtual environment. For this purpose you can use the following commands:
 
-At the end, you want to make sure that people who are interested in your project can create an identical environment on their own computer in order to be able to run your code without running into errors. Therefore you can create a `requirements file` and add it to your repository. You can create such a file by running the following command: 
-
-```bash
-pip freeze > requirements.txt
+```sh
+pyenv local 3.9.8
+python -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
+pip install -r requirements.txt
 ```
 
-*Note: In rare case such a requirements file created with `pip freeze` might not ensure that another (especially M1 chip) user can install and execute it properly. This can happen if libraries need to be compiled (e.g. SciPy). Then it also depends on environment variables and the actual system libraries.*
+The added [requirements file](requirements.txt) contains all libraries and dependencies we need to execute the EDA notebook.
 
-### Unit testing (Optional)
+## Data
 
-If you write python scripts for your data processing methods, you can also write unit tests. In order to run the tests execute in terminal:
-
-```bash
-pytest
-```
-
-This command will execute all the functions in your project that start with the word **test**.
+The dataset for the notebook is stored in the `data` folder. 
